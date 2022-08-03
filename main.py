@@ -2,11 +2,15 @@
 # email: xinshuo.weng@gmail.com
 
 from __future__ import print_function
+from pprint import pprint
 import matplotlib; matplotlib.use('Agg')
 import os, numpy as np, time, sys, argparse
+root = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(root, "Xinshuo_PyToolbox"))
 from AB3DMOT_libs.utils import Config, get_subfolder_seq, initialize
 from AB3DMOT_libs.io import load_detection, get_saving_dir, get_frame_det, save_results, save_affinity
 from scripts.post_processing.combine_trk_cat import combine_trk_cat
+#sys.path.append('/home/s0000062/repos/AutoAnnotations/auto_anno/AB3DMOT/Xinshuo_PyToolbox')
 from xinshuo_io import mkdir_if_missing, save_txt_file
 from xinshuo_miscellaneous import get_timestring, print_log
 
